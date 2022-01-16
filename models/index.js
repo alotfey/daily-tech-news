@@ -3,7 +3,8 @@ const Post = require("./Post");
 
 // create associations one to many
 User.hasMany(Post, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: "cascade"
 });
 
 Post.belongsTo(User, {

@@ -1,1 +1,8 @@
-<div>You are on the homepage</div>
+<ul>
+  {{#each posts}}
+  <li>{{title}}</li>
+  <li>{{post_content}}</li>
+  <li>Create by: {{user.username}}</li>
+  <p>============================</p>
+   {{/each}}
+</ul>
