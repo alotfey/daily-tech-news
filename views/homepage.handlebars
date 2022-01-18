@@ -1,8 +1,17 @@
-<ul>
-  {{#each posts}}
-  <li>{{title}}</li>
-  <li>{{post_content}}</li>
-  <li>Create by: {{user.username}}</li>
-  <p>============================</p>
-   {{/each}}
-</ul>
+{{#each posts as |post|}}
+<div class="row">
+  <article class="blog-post card">
+    <p class="blog-post-title bg-primary text-white h3">{{post.title}}</p> <span class="blog-post-meta  bg-primary text-white">{{post.created_at}} By {{post.user.username}}</span>
+
+    <p class="bg-info">{{post.post_content}}</p>
+    <hr>
+    </div>
+
+
+<div class="comment mt-4 text-justify float-left">
+<h4>{{post.comments.comment_text}}</h4> <span>- {{post.comments.username}}</span> <br>
+<p>{{post.comments.created_at}}</p>
+</div>
+
+{{/each}}
+

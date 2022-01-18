@@ -15,34 +15,49 @@
     <header>
         <div class="container">
           <div class="row">
-            <div class="col-lg-2 col-md-2">
-                  <a class="navbar-brand" href="#">Daily Tech News</a>
-            </div>
-            <div class="col-lg-4 col-md-4">
-              <ul class="menu">
-                <li class="menu-item">Home</li>
-                <li class="menu-item">Dashboard</li>
-              </ul>
+            <div class="col-lg-10 col-md-10">
+                  <a class="navbar-brand" href="/">Daily Tech News</a>
             </div>
 
-            <div class="col-lg-4 col-md-4">
+
+            <div class="col-lg-2 col-md-2 ">
               <ul class="login">
                 <li class="login-item"><a href="/login">login</a></li>
-                
-                <li class="login-item">logout</li>
+                <li class="vr"></li>
+                <li id="logout" class="login-item"><a href="/logout">logout</a></li>
               </ul>
             </div>
           </div>
+          <hr>
+          <div class="row justify-content-md-left">
+            <div class="col-lg-4"><a href="/dashboard">Dashboard</a></div>
+          </div>
+          <hr>
         </div>
     </header>
-    <main class="container">
-      {{{ body }}}
+    <main>
+     <div class="container">
+        <div class="row">
+          {{{ body }}}
+        </div>
+     </div>
+      
+     
     </main>
     
     <footer class="container">
-      Thanks for visiting!
+      <div class="row justify-content-md-center">
+        <div class="col-lg-2 col-md-2">
+           <p>&copy; 2022 daily tech news</p>
+        </div>
+       
+
+
+      </div>
+      
     </footer>
- 
+   <script src="/javascript/logout.js"></script>
+
 </body>
 
 </html>
